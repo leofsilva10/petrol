@@ -1,0 +1,36 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Petrol";
+}
+
+<div class="box_agrupador">
+    <div class="box_principal2">
+        <h1 class="texto_amarelo">PETROL</h1>
+        <h2 class="texto_amarelo">Conheça as tecnologias das nossas operações no mar.</h2>
+        <p class="texto_branco">
+            As plataformas podem ser de perfuração, de produção (quando pode extrair o petróleo e separar óleo, água e gás) ou ter as duas funções.<br />
+            Em cada campo, analisamos as condições para encontrar o tipo de plataforma mais adequado. <br />
+            Podemos encontrar numa plataforma engenheiros, técnicos de várias especialidades, profissionais de hotelaria e enfermagem, <br />
+            técnicos de segurança, mergulhadores, entre outros. <br />
+            No Brasil trabalhamos com mais de cem plataformas de produção – a maioria delas, fixa.
+        </p>
+        <p class="texto_amarelo"><b>SELECIONE A PLATAFORMA QUE DESEJA CONHECER:</b></p>
+    </div>
+
+    <div class="box_principal2">
+        @foreach (var tipoPlataforma in Model.listaTiposPlataformas)
+        {
+            <div class="box_plataforma">
+                <p>
+                    <a href="Plataformas?codigo_tipo=@tipoPlataforma.Codigo" class="link_plataforma">@tipoPlataforma.Nome</a>
+                </p>
+                <p>
+                    <a href="Plataformas?codigo_tipo=@tipoPlataforma.Codigo" class="link_plataforma">
+                        <img src="~/images/@tipoPlataforma.Imagem" width="75%">
+                    </a>
+                </p>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,60 @@
+﻿@page
+@model Petrol.Pages.Plataformas.EditModel
+@{
+}
+
+<div class="box_secundario">
+    <h3 class="texto_verde">Plataforma: Editar</h3>
+    <div class="faixa_amarela"></div>
+    @if (Model.msgErro.Length > 0)
+    {
+        <div>
+            <strong>@Model.msgErro</strong>
+        </div>
+    }
+</div>
+
+<div class="box_secundario">
+    <form method="post">
+        <input type="hidden" name="codigo" value="@Model._codigo" />
+        <div>
+            <label>Plataforma</label>
+            <div>
+                <input type="text" name="nome" required value="@Model._nome" />
+            </div>
+        </div>
+        <div>
+            <label>Tipo</label>
+            <div>
+                <select name="tipo" id="tipo">
+                    <option value="0">Selecione</option>
+                    @foreach (var tipoPlataforma in Model.listaTiposPlataformas)
+                    {
+                        if (Model._codigoTipo == tipoPlataforma.Codigo)
+                        {
+                            <option value="@tipoPlataforma.Codigo" selected>@tipoPlataforma.Nome</option>
+                        }
+                        else
+                        {
+                            <option value="@tipoPlataforma.Codigo">@tipoPlataforma.Nome</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+
+        @if (Model.msgSucesso.Length > 0)
+        {
+            <div>
+                <strong>@Model.msgSucesso</strong>
+            </div>
+        }
+
+        <div>
+            <br />
+            <button type="submit" class="btn_padrao">Salvar</button>
+        </div>
+
+    </form>
+</div>
+

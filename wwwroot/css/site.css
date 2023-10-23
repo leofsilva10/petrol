@@ -1,0 +1,198 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.texto_amarelo {
+    color: #F9D805;
+}
+
+.texto_branco {
+    color: #ffff;
+}
+
+.texto_verde {
+    color: seagreen;
+}
+
+.box_principal {
+    padding: 15px;
+    background-color: seagreen;
+    align-self: center;
+    text-align: center;
+    align-content: center;
+}
+
+.box_secundario {
+    padding: 15px;
+    align-self: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.box_pesquisa {
+    padding: 10px;
+    align-self: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.box_principal2 {
+    padding: 15px;
+    align-self: center;
+    text-align: center;
+    align-content: center;
+    vertical-align: top;
+    margin: 0 auto;
+}
+
+.box_agrupador {
+    align-self: center;
+    text-align: center;
+    align-content: center;
+    background: url(../images/fundo-01.jpeg);
+}
+
+.box_plataforma {
+    padding: 30px;
+    font-weight: bold;
+    display: inline-block;
+    width: 21%;
+    height: 200px;
+}
+
+.faixa_amarela {
+    height: 5px;
+    width: 100%;
+    background-color: #F9D805;
+}
+
+.btn {
+    background-color: seagreen;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    color: #ffff;
+    text-decoration: none;
+    height: 30px;
+    text-align: center;
+}
+
+.btn_padrao {
+    background-color: seagreen;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    color: #ffff;
+    text-decoration: none;
+    height: 30px;
+    text-align: center;
+}
+
+.btn_editar {
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    color: #ffff;
+    text-decoration: none;
+    height: 50px;
+    text-align: center;
+}
+
+.btn_editar:hover {
+    background-color: lightseagreen;
+}
+
+.btn_excluir {
+    background-color: orangered;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    color: #ffff;
+    text-decoration: none;
+    height: 50px;
+    text-align: center;
+}
+
+.btn_excluir:hover {
+    background-color: darkred;
+}
+
+a.link_plataforma:link {
+    text-decoration: none;
+    color: white;
+}
+
+a.link_plataforma:hover {
+    text-decoration: none;
+    color: #F9D805;
+}
+
+a.link_plataforma:visited {
+    text-decoration: none;
+    color: white;
+}
+
+a.link_padrao {
+    text-decoration: none;
+    color: dodgerblue;
+}
+
+.linha_tabela_titulo1 {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.linha_tabela1 {
+    padding: 10px;
+    vertical-align: middle;
+    border-top: 1px solid #ffff;
+}
+
+.celula_tabela1 {
+    padding: 10px;
+    vertical-align: middle;
+    border-left: 1px solid #ffff;
+}
+
+.celula_tabela2 {
+    padding: 5px;
+    vertical-align: middle;
+    border: 1px solid silver;
+}
+
+.linha_tabela2 {
+    padding: 5px;
+    vertical-align: middle;
+    border-top: 1px solid whitesmoke;
+}
+
+.linha_tabela2:hover {
+    background-color: whitesmoke;
+}
+
+.linha_titulo_tabela2 {
+    padding: 5px;
+    vertical-align: middle;
+    border-top: 1px solid whitesmoke;
+    font-weight: bold;
+    background-color: whitesmoke;
+}
+
+.tabela_dados {
+    width: 100%;
+    border: 1px solid whitesmoke;
+    margin-bottom: 15px;
+}
+

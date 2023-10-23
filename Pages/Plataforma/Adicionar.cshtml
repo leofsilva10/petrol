@@ -1,0 +1,50 @@
+﻿@page
+@model Petrol.Pages.Plataformas.CreateModel
+@{
+}
+
+<div class="box_secundario">
+    <h3 class="texto_verde">Plataforma: Adicionar</h3>
+    <div class="faixa_amarela"></div>
+    @if (Model.msgErro.Length > 0)
+    {
+        <div>
+            <strong>@Model.msgErro</strong>
+        </div>
+    }
+</div>
+
+<div class="box_secundario">
+    <form method="post">
+        <div>
+            <label>Plataforma</label>
+            <div>
+                <input type="text" name="nome" required value="@Model.infoPlataforma.Nome" />
+            </div>
+        </div>
+        <div>
+            <label>Tipo</label>
+            <div>
+                <select name="tipo" id="tipo">
+                    <option value="0">Selecione</option>
+                    @foreach (var tipoPlataforma in Model.listaTiposPlataformas)
+                    {
+                        <option value="@tipoPlataforma.Codigo">@tipoPlataforma.Nome</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        @if (Model.msgSucesso.Length > 0)
+        {
+            <div>
+                <strong>@Model.msgSucesso</strong>
+            </div>
+        }
+
+        <div>
+            <br />
+            <button type="submit" class="btn_padrao">Salvar</button>
+        </div>
+    </form>
+</div>

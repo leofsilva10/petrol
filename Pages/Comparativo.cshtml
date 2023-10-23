@@ -1,0 +1,92 @@
+﻿@page
+@model Petrol.Pages.ComparativoModel
+@{
+}
+
+<div class="box_principal">
+    <h3 class="texto_amarelo">COMPARATIVO ENTRE OS<br/>DIFERENTES TIPOS DE PLATAFORMAS</h3>
+</div>
+
+<div class="box_principal">
+    <table style="width:80%;" align="center">
+        <tr class="linha_tabela_titulo1">
+            <td width="20%">&nbsp;</td>
+            <td class="celula_tabela1">
+                <label class="texto_amarelo">Tipo Plataforma</label>
+            </td>
+            <td class="celula_tabela1">
+                <label class="texto_amarelo">Lâmina</label>
+            </td>
+            <td class="celula_tabela1">
+                <label class="texto_amarelo">Descrição</label>
+            </td>
+            <td class="celula_tabela1">
+                <label class="texto_amarelo">Perfuração</label>
+            </td>
+            <td class="celula_tabela1">
+                <label class="texto_amarelo">Produção</label>
+            </td>
+            <td class="celula_tabela1">
+                <label class="texto_amarelo">Controle de Poços</label>
+            </td>
+            <td class="celula_tabela1">
+                <label class="texto_amarelo">Escoamento</label>
+            </td>
+            <td class="celula_tabela1">
+                <label class="texto_amarelo">Vantagem</label>
+            </td>
+        </tr>
+        @foreach (var tipoPlataforma in Model.listaTiposPlataformas)
+        {
+            <tr class="linha_tabela1">
+                @if (tipoPlataforma.Imagem != "")
+                {
+                    <td width="20%"><img src="~/images/@tipoPlataforma.Imagem" style="max-width:100%;height:auto;"></td>
+                }
+                else
+                {
+                    <td width="20%"></td>
+                }
+                <td class="celula_tabela1">
+                    <label class="texto_amarelo">@tipoPlataforma.Nome</label>
+                </td>
+                <td class="celula_tabela1">
+                    <label class="texto_branco">@tipoPlataforma.Lamina</label>
+                </td>
+                <td class="celula_tabela1">
+                    <label class="texto_branco">@tipoPlataforma.Descricao</label>
+                </td>
+                @if (tipoPlataforma.Perfuracao == 1)
+                { 
+                    <td class="celula_tabela1"><label class="texto_branco">Sim</label></td>; 
+                }
+                else
+                { 
+                    <td class="celula_tabela1"></td>; 
+                }
+                @if (tipoPlataforma.Producao == 1)
+                { 
+                    <td class="celula_tabela1"><label class="texto_branco">Sim</label></td>; 
+                }
+                else
+                { 
+                    <td class="celula_tabela1"></td>; 
+                }
+                @if (tipoPlataforma.ControlePocos == 1)
+                { 
+                    <td class="celula_tabela1"><label class="texto_branco">Sim</label></td>; 
+                }
+                else
+                { 
+                    <td class="celula_tabela1"></td>; 
+                }
+                <td class="celula_tabela1">
+                    <label class="texto_branco">@tipoPlataforma.Escoamento</label>
+                </td>
+                <td class="celula_tabela1">
+                    <label class="texto_branco">@tipoPlataforma.Vantagem</label>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

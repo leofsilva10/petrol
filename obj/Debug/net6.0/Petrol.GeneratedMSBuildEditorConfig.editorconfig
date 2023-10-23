@@ -1,0 +1,92 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Petrol
+build_property.RootNamespace = Petrol
+build_property.ProjectDir = C:\wamp64\www\dev\C#\Petrol\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\wamp64\www\dev\C#\Petrol
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/wamp64/www/dev/C\#/Petrol/Pages/Comparativo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcGFyYXRpdm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/wamp64/www/dev/C\#/Petrol/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/wamp64/www/dev/C\#/Petrol/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/wamp64/www/dev/C\#/Petrol/Pages/Plataformas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxhdGFmb3JtYXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/wamp64/www/dev/C\#/Petrol/Pages/Plataforma/Adicionar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxhdGFmb3JtYVxBZGljaW9uYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/wamp64/www/dev/C\#/Petrol/Pages/Plataforma/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxhdGFmb3JtYVxFZGl0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/wamp64/www/dev/C\#/Petrol/Pages/Plataforma/Excluir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxhdGFmb3JtYVxFeGNsdWlyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/wamp64/www/dev/C\#/Petrol/Pages/Producao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjYW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/wamp64/www/dev/C\#/Petrol/Pages/Producao/Adicionar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjYW9cQWRpY2lvbmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/wamp64/www/dev/C\#/Petrol/Pages/Producao/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjYW9cRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/wamp64/www/dev/C\#/Petrol/Pages/Producao/Excluir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjYW9cRXhjbHVpci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/wamp64/www/dev/C\#/Petrol/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/wamp64/www/dev/C\#/Petrol/Pages/TipoPlataforma/Adicionar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGlwb1BsYXRhZm9ybWFcQWRpY2lvbmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/wamp64/www/dev/C\#/Petrol/Pages/TipoPlataforma/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGlwb1BsYXRhZm9ybWFcRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/wamp64/www/dev/C\#/Petrol/Pages/TipoPlataforma/Excluir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGlwb1BsYXRhZm9ybWFcRXhjbHVpci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/wamp64/www/dev/C\#/Petrol/Pages/TiposPlataformas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGlwb3NQbGF0YWZvcm1hcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/wamp64/www/dev/C\#/Petrol/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/wamp64/www/dev/C\#/Petrol/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/wamp64/www/dev/C\#/Petrol/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ocqz5z0ez6

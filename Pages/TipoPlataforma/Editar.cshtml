@@ -1,0 +1,103 @@
+﻿@page
+@model Petrol.Pages.TiposPlataformas.EditModel
+@{
+}
+
+<div class="box_secundario">
+    <h3 class="texto_verde">Tipo de Plataforma: Editar</h3>
+    <div class="faixa_amarela"></div>
+    @if (Model.msgErro.Length > 0)
+    {
+        <div>
+            <strong>@Model.msgErro</strong>
+        </div>
+    }
+</div>
+
+<div class="box_secundario">
+    <form method="post">
+        <input type="hidden" name="codigo" value="@Model._codigo" />
+        <div>
+            <label>Tipo de Plataforma</label>
+            <div>
+                <input type="text" name="nome" required value="@Model._nome" />
+            </div>
+        </div>
+        <div>
+            <label>Descrição</label>
+            <div>
+                <input type="text" name="descricao" size="100" value="@Model._descricao" />
+            </div>
+        </div>
+        <div>
+            <label>Lâmina</label>
+            <div>
+                <input type="text" name="lamina" size="100" value="@Model._lamina" />
+            </div>
+        </div>
+        <div>
+            @if (Model._perfuracao == 1)
+            { 
+                <input type="checkbox" name="perfuracao" checked />; 
+            }
+            else
+            { 
+                <input type="checkbox" name="perfuracao" />; 
+            }
+            <label>Perfuração</label>
+        </div>
+        <div>
+            @if (Model._producao == 1)
+            { 
+                <input type="checkbox" name="producao" checked />; 
+            }
+            else
+            { 
+                <input type="checkbox" name="producao" />; 
+            }
+            <label>Produção</label>
+        </div>
+        <div>
+            @if (Model._controlePocos == 1)
+            { 
+                <input type="checkbox" name="controle_pocos" checked />; 
+            }
+            else
+            { 
+                <input type="checkbox" name="controle_pocos" />; 
+            }
+            <label>Controle de Poços</label>
+        </div>
+        <div>
+            <label>Escoamento</label>
+            <div>
+                <input type="text" name="escoamento" size="100" value="@Model._escoamento" />
+            </div>
+        </div>
+        <div>
+            <label>Vantagem</label>
+            <div>
+                <input type="text" name="vantagem" size="100" value="@Model._vantagem" />
+            </div>
+        </div>
+        <div>
+            <label>Imagem</label>
+            <div>
+                <input type="text" name="imagem" value="@Model._imagem" />
+            </div>
+        </div>
+
+        @if (Model.msgSucesso.Length > 0)
+        {
+            <div>
+                <strong>@Model.msgSucesso</strong>
+            </div>
+        }
+
+        <div>
+            <br />
+            <button type="submit" class="btn_padrao">Salvar</button>
+        </div>
+    </form>
+</div>
+

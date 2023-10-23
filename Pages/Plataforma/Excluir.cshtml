@@ -1,0 +1,18 @@
+﻿@page
+@{
+    try
+    {
+        // Obter código da plataforma selecionada.
+        string codigo = Request.Query["codigo"];
+
+        var classPlataforma = new Entities.Plataforma();
+
+        // Excluir plataforma.
+        classPlataforma.Excluir(int.Parse(codigo));
+    }
+    catch (Exception ex)
+    {
+    }
+
+    Response.Redirect("/Plataformas");
+}

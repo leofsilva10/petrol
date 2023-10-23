@@ -1,0 +1,65 @@
+﻿@page
+@model Petrol.Pages.Producao.EditModel
+@{
+}
+
+<div class="box_secundario">
+    <h3 class="texto_verde">Produção: Editar</h3>
+    <div class="faixa_amarela"></div>
+    @if (Model.msgErro.Length > 0)
+    {
+        <div>
+            <strong>@Model.msgErro</strong>
+        </div>
+    }
+</div>
+
+<div class="box_secundario">
+    <form method="post">
+        <input type="hidden" name="codigo" value="@Model._codigo" />
+        <div>
+            <label>Plataforma</label>
+            <div>
+                <select name="codigoPlataforma" id="codigoPlataforma">
+                    <option value="0">Selecione</option>
+                    @foreach (var plataforma in Model.listaPlataformas)
+                    {
+                        if (Model._codigoPlataforma == plataforma.Codigo)
+                        {
+                            <option value="@plataforma.Codigo" selected>@plataforma.Nome</option>
+                        }
+                        else
+                        {
+                            <option value="@plataforma.Codigo">@plataforma.Nome</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+        <div>
+            <label>Valor</label>
+            <div>
+                <input type="text" name="valor" required value="@Model._valor" />
+            </div>
+        </div>
+        <div>
+            <label>Data</label>
+            <div>
+                <input type="date" name="data_registro" required value="@Model._data_registro" />
+            </div>
+        </div>
+
+        @if (Model.msgSucesso.Length > 0)
+        {
+            <div>
+                <strong>@Model.msgSucesso</strong>
+            </div>
+        }
+
+        <div>
+            <br />
+            <button type="submit" class="btn_padrao">Salvar</button>
+        </div>
+    </form>
+</div>
+

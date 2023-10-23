@@ -1,0 +1,18 @@
+﻿@page
+@{
+    try
+    {
+        // Obter código da produção selecionada.
+        string codigo = Request.Query["codigo"];
+
+        var clsPlataforma = new Entities.Producao();
+
+        // Excluir plataforma.
+        clsPlataforma.Excluir(int.Parse(codigo));
+    }
+    catch (Exception ex)
+    {
+    }
+
+    Response.Redirect("/Producao");
+}

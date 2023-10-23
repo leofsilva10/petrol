@@ -1,0 +1,50 @@
+﻿@page
+@model Petrol.Pages.ProducaoModel
+@{
+}
+
+<div class="box_secundario">
+    <h3 class="texto_verde">Produção</h3>
+    <div class="faixa_amarela"></div>
+    <br />
+    <label>Plataforma: </label>
+    <form method="post">
+        <select name="codigoPlataforma" id="codigoPlataforma">
+            <option value="0">Selecione</option>
+            @foreach (var plataforma in Model.listaPlataformas)
+            {
+                <option value="@plataforma.Codigo">@plataforma.Nome</option>
+            }
+        </select>
+        <input type="submit" value="Pesquisar" />
+    </form>
+</div>
+
+<div class="box_secundario">
+    <p>
+        <a href="/Producao/Adicionar" class="btn">Novo</a>
+    </p>
+    <table>
+        <tr class="linha_titulo_tabela2">
+            <td class="celula_tabela2">Plataforma</td>
+            <td class="celula_tabela2">Valor (barris)</td>
+            <td class="celula_tabela2">Data</td>
+            <td class="celula_tabela2">Ação</td>
+        </tr>
+        @foreach (var producao in Model.listaProducao)
+        {
+            <tr class="linha_tabela2">
+                <td class="celula_tabela2">@Model.listaPlataformas.Find(item => item.Codigo == producao.CodigoPlataforma).Nome</td>
+                <td class="celula_tabela2">@producao.Valor</td>
+                <td class="celula_tabela2">@producao.DataRegistro</td>
+                <td class="celula_tabela2">
+                    <a href="/Producao/Editar?codigo=@producao.Codigo" class="btn_editar">&nbsp;Editar&nbsp;</a>
+                    <a href="/Producao/Excluir?codigo=@producao.Codigo" class="btn_excluir">&nbsp;Excluir&nbsp;</a>
+                </td>
+            </tr>
+        }
+    </table>
+    <br />
+</div>
+
+

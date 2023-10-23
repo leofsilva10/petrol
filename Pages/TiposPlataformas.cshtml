@@ -1,0 +1,54 @@
+﻿@page
+@model Petrol.Pages.TiposPlataformasModel
+@{
+}
+
+<div class="box_secundario">
+    <h3 class="texto_verde">Tipos de Plataformas</h3>
+    <div class="faixa_amarela"></div>
+    <br />
+    <form method="post">
+        <label for="name">Tipo de Plataforma: </label>
+        <input type="text" id="nomeTipoPlataforma" name="nomeTipoPlataforma" />
+        <input type="submit" value="Pesquisar" />
+    </form>
+</div>
+
+<div class="box_secundario">
+    <p>
+        <a href="/TipoPlataforma/Adicionar" class="btn">Novo</a>
+    </p>
+    <table>
+        <tr class="linha_titulo_tabela2">
+            <td class="celula_tabela2">Tipo Plataforma</td>
+            <td class="celula_tabela2">Descrição</td>
+            <td class="celula_tabela2">Lâmina</td>
+            <td class="celula_tabela2">Perfuração</td>
+            <td class="celula_tabela2">Produção</td>
+            <td class="celula_tabela2">Controle Poços</td>
+            <td class="celula_tabela2">Escoamento</td>
+            <td class="celula_tabela2">Vantagem</td>
+            <td class="celula_tabela2">Imagem</td>
+            <td class="celula_tabela2">Ação</td>
+        </tr>
+        @foreach (var tipoPlataforma in Model.listaTiposPlataformas)
+        {
+            <tr class="linha_tabela2">
+                <td class="celula_tabela2">@tipoPlataforma.Nome</td>
+                <td class="celula_tabela2">@tipoPlataforma.Descricao</td>
+                <td class="celula_tabela2">@tipoPlataforma.Lamina</td>
+                @if (tipoPlataforma.Perfuracao == 1){ <td class="celula_tabela2">Sim</td>; }else{ <td class="celula_tabela2"></td>; }
+                @if (tipoPlataforma.Producao == 1){ <td class="celula_tabela2">Sim</td>; }else{ <td class="celula_tabela2"></td>; }
+                @if (tipoPlataforma.ControlePocos == 1){ <td class="celula_tabela2">Sim</td>; }else{ <td class="celula_tabela2"></td>; }
+                <td class="celula_tabela2">@tipoPlataforma.Escoamento</td>
+                <td class="celula_tabela2">@tipoPlataforma.Vantagem</td>
+                <td class="celula_tabela2">@tipoPlataforma.Imagem</td>
+                <td class="celula_tabela2">
+                    <a href="/TipoPlataforma/Editar?codigo=@tipoPlataforma.Codigo" class="btn_editar">&nbsp;Editar&nbsp;</a>
+                    <a href="/TipoPlataforma/Excluir?codigo=@tipoPlataforma.Codigo" class="btn_excluir">&nbsp;Excluir&nbsp;</a>
+                </td>
+            </tr>
+        }
+    </table>
+    <br />
+</div>

@@ -1,0 +1,52 @@
+﻿@page
+@model Petrol.Pages.PlataformasModel
+@{
+}
+
+<div class="box_secundario">
+    <h3 class="texto_verde">Plataformas</h3>
+    <div class="faixa_amarela"></div>
+    <br />
+    <form method="post">
+        <label for="name">Plataforma: </label>
+        <input type="text" id="nomePlataforma" name="nomePlataforma" />
+        <label for="name">Tipo: </label>
+        <select name="codigoTipoPlataforma" id="codigoTipoPlataforma">
+            <option value="0">Selecione</option>
+            @foreach (var tipoPlataforma in Model.listaTiposPlataformas)
+            {
+                <option value="@tipoPlataforma.Codigo">@tipoPlataforma.Nome</option>
+            }
+        </select>
+        <input type="submit" value="Pesquisar" />
+    </form>
+</div>
+
+<div class="box_secundario">
+    <p>
+        <a href="/Plataforma/Adicionar" class="btn">Novo</a>
+    </p>
+    <table>
+        <tr class="linha_titulo_tabela2">
+            <td class="celula_tabela2">Plataforma</td>
+            <td class="celula_tabela2">Tipo</td>
+            <td class="celula_tabela2">Ação</td>
+        </tr>
+        @foreach (var plataforma in Model.listaPlataformas)
+        {
+            <tr class="linha_tabela2">
+                <td class="celula_tabela2">
+                    
+                    <a href="/Producao?codigo_plataforma=@plataforma.Codigo" class="link_padrao">@plataforma.Nome</a>
+                </td>
+                <td class="celula_tabela2">@Model.listaTiposPlataformas.Find(item => item.Codigo == plataforma.CodigoTipo).Nome</td>
+                <td class="celula_tabela2">
+                    <a href="/Plataforma/Editar?codigo=@plataforma.Codigo" class="btn_editar">&nbsp;Editar&nbsp;</a>
+                    <a href="/Plataforma/Excluir?codigo=@plataforma.Codigo" class="btn_excluir">&nbsp;Excluir&nbsp;</a>
+                </td>
+            </tr>
+        }
+    </table>
+    <br />
+</div>
+
